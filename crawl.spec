@@ -2,7 +2,7 @@ Summary:	Orb of Zot-retrieval-quest
 Summary(pl):	Zdob±d¼ Kulê Zota
 Name:		crawl
 Version:	400b23
-Release:	1
+Release:	2
 Epoch:		1
 License:	Crawl GPL
 Group:		Applications/Games
@@ -12,6 +12,7 @@ Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
 BuildRequires:	ncurses-devel
+Requires:	applnk >= 1.5.13
 Requires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,12 +51,12 @@ cd source
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6,%{_datadir},%{_applnkdir}/Games/Roguelike,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6,%{_datadir},%{_applnkdir}/Games/RPG,%{_pixmapsdir}}
 
 install source/crawl $RPM_BUILD_ROOT%{_bindir}
 install docs/crawl.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Roguelike
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/RPG
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 :> $RPM_BUILD_ROOT%{_datadir}/scores
@@ -71,5 +72,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/scores
 %{_mandir}/man6/*
-%{_applnkdir}/Games/Roguelike/*
+%{_applnkdir}/Games/RPG/*
 %{_pixmapsdir}/*
