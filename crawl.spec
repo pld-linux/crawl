@@ -60,14 +60,13 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 :> $RPM_BUILD_ROOT%{_datadir}/scores
 
-gzip -9nf init.txt licence.txt macro.txt readme.txt docs/buglist.txt docs/changes.* docs/crawl.txt docs/todo.txt docs/versions.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz docs/*.gz
+%doc init.txt licence.txt macro.txt readme.txt docs/buglist.txt 
+%doc docs/changes.* docs/crawl.txt docs/todo.txt docs/versions.txt
 %attr(2755,root,games) %{_bindir}/crawl
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/scores
