@@ -14,6 +14,7 @@ Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
 BuildRequires:	ncurses-devel
 Requires:	zip
+Conflicts:	applnk < 1.5.13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_datadir	/var/games/crawl
