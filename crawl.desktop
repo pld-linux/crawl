@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=crawl
+Comment=Roguelike game
+Comment[pl]=Gra roguelike
+Icon=crawl.png
+Exec=/usr/games/crawl
+Terminal=1
+Type=Application

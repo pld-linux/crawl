@@ -1,0 +1,28 @@
+diff -ruN cr400beta22-srcdupa/source/makefile.lnx cr400beta22-src/source/makefile.lnx
+--- cr400beta22-srcdupa/source/makefile.lnx	Wed Dec 19 15:02:16 2001
++++ cr400beta22-src/source/makefile.lnx	Thu Jan 31 17:28:31 2002
+@@ -13,11 +13,11 @@
+ DELETE = rm -f
+ COPY = cp
+ OS_TYPE = LINUX
+-CFLAGS = -Wall -g -D$(OS_TYPE) $(EXTRA_FLAGS)
+-LDFLAGS = -static -L/usr/lib
++CFLAGS = -Wall -D$(OS_TYPE) $(EXTRA_FLAGS)
++LDFLAGS =
+ MCHMOD = 2755
+-# INSTALLDIR = /usr/games
+-INSTALLDIR = /opt/crawl/bin
++INSTALLDIR = $(DESTDIR)/usr/games
++#INSTALLDIR = /opt/crawl/bin
+ LIB = -lncurses
+ 
+ # Include for Linux
+@@ -55,7 +55,7 @@
+ 	${CXX} -g -p ${LDFLAGS} $(INCLUDES) $(CFLAGS) $(OBJECTS) -o $(GAME) $(LIB)
+ 
+ .cc.o:
+-	${CXX} ${CFLAGS} -c $< ${INCLUDE}
++	${CXX} ${CFLAGS} -c $< ${INCLUDES}
+ 
+ .h.cc:
+ 	touch $@

@@ -1,0 +1,21 @@
+diff -ruN cr400beta22-srcdupa/source/AppHdr.h cr400beta22-src/source/AppHdr.h
+--- cr400beta22-srcdupa/source/AppHdr.h	Fri Nov  9 02:12:54 2001
++++ cr400beta22-src/source/AppHdr.h	Fri Feb  1 18:57:26 2002
+@@ -355,7 +355,7 @@
+     // Setting it to nothing or not setting it will cause all game files to
+     // be dumped in the current directory.
+     //
+-    #define SAVE_DIR_PATH       "/opt/crawl/lib/"
++    #define SAVE_DIR_PATH       "/var/games/crawl/"
+ 
+     // will make this little thing go away.  Define SAVE_PACKAGE_CMD
+     // to a command to compress and bundle the save game files into a
+@@ -376,7 +376,7 @@
+     #define DO_ANTICHEAT_CHECKS
+ 
+     // This defines the chmod permissions for score and bones files.
+-    #define SHARED_FILES_CHMOD_PRIVATE  0664
++    #define SHARED_FILES_CHMOD_PRIVATE  0600
+     #define SHARED_FILES_CHMOD_PUBLIC   0664
+ 
+     // If we're on a multiuser system, file locking of shared files is
