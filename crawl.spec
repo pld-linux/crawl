@@ -55,12 +55,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6,%{_datadir},%{_applnkdir}/
 install source/crawl $RPM_BUILD_ROOT%{_bindir}
 install docs/crawl.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
-gzip -9nf init.txt licence.txt macro.txt readme.txt docs/buglist.txt docs/changes.* docs/crawl.txt docs/todo.txt docs/versions.txt
-
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Roguelike
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-touch $RPM_BUILD_ROOT%{_datadir}/scores
+:> $RPM_BUILD_ROOT%{_datadir}/scores
+
+gzip -9nf init.txt licence.txt macro.txt readme.txt docs/buglist.txt docs/changes.* docs/crawl.txt docs/todo.txt docs/versions.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
