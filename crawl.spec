@@ -13,7 +13,6 @@ Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
 BuildRequires:	ncurses-devel
-Requires:	applnk >= 1.5.13
 Requires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
