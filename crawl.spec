@@ -5,8 +5,21 @@ Version:	400beta22
 Release:	2
 License:	Crawl GPL
 Group:		Applications/Games
+Group(cs):	Aplikace/Hry
+Group(da):	Programmer/Spil
 Group(de):	Applikationen/Spiele
+Group(es):	Aplicaciones/Juegos
+Group(fr):	Applications/Jeux
+Group(is):	Forrit/Leikir
+Group(it):	Applicazioni/Giochi
+Group(ja):	•¢•◊•Í•±°º•∑•Á•Û/•≤°º•‡
+Group(no):	Applikasjoner/Spill
 Group(pl):	Aplikacje/Gry
+Group(pt):	AplicaÁıes/Jogos
+Group(ru):	“…Ãœ÷≈Œ…—/È«“Ÿ
+Group(sl):	Programi/Igre
+Group(sv):	Till‰mpningar/Spel
+Group(uk):	“…ÀÃ¡ƒŒ¶ “œ«“¡Õ…/∂«“…
 Source0:	ftp://ftp.dungeoncrawl.org/LATEST/devteam/cr%{version}-src.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -16,7 +29,7 @@ BuildRequires:	ncurses-devel
 Requires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_datadir	/var/games/crawl
+%define		_datadir	/var/games/crawl
 
 %description
 Crawl is a large and very random game of subterranean exploration in a
@@ -51,8 +64,8 @@ cd source
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6,%{_datadir},%{_applnkdir}/Games/Roguelike,%{_pixmapsdir}}
+
 install source/crawl $RPM_BUILD_ROOT%{_bindir}
 install docs/crawl.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
@@ -68,13 +81,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz docs/*.gz
 %attr(2755,root,games) %{_bindir}/crawl
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/scores
-
 %{_mandir}/man6/*
-%doc *.gz
-%doc docs/*.gz
-
 %{_applnkdir}/Games/Roguelike/*
 %{_pixmapsdir}/*
