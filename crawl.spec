@@ -2,7 +2,7 @@ Summary:	Orb of Zot-retrieval-quest
 Summary(pl):	Zdob±d¼ Kulê Zota
 Name:		crawl
 Version:	400beta22
-Release:	2
+Release:	3
 License:	Crawl GPL
 Group:		Applications/Games
 Source0:	ftp://ftp.dungeoncrawl.org/LATEST/devteam/cr%{version}-src.tar.bz2
