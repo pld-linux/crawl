@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc init.txt licence.txt macro.txt readme.txt docs/buglist.txt 
+%doc init.txt licence.txt macro.txt readme.txt docs/buglist.txt
 %doc docs/changes.* docs/crawl.txt docs/todo.txt docs/versions.txt
 %attr(2755,root,games) %{_bindir}/crawl
 %attr(2775,root,games) %dir %{_datadir}
