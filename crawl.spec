@@ -1,8 +1,8 @@
-Summary:	Roguelike game.
-Summary(pl):	Gra roguelike.
+Summary:	Orb of Zot-retrieval-quest
+Summary(pl):	Zdob±d¼ Kulê Zota
 Name:		crawl
 Version:	400beta22
-Release:	1
+Release:	2
 License:	Crawl GPL
 Group:		Applications/Games
 Group(de):	Applikationen/Spiele
@@ -17,7 +17,6 @@ Requires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_datadir	/var/games/crawl
-%define _bindir		/usr/games
 
 %description
 Crawl is a large and very random game of subterranean exploration in a
