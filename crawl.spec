@@ -15,6 +15,7 @@ Patch1:		%{name}-savedir.patch
 BuildRequires:	ncurses-devel
 Requires:	zip
 Conflicts:	applnk < 1.5.13
+URL:		http://dungeoncrawl.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_datadir	/var/games/crawl
