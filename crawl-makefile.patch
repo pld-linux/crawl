@@ -1,21 +1,36 @@
-diff -ruN cr400beta22-srcdupa/source/makefile.lnx cr400beta22-src/source/makefile.lnx
---- cr400beta22-srcdupa/source/makefile.lnx	Wed Dec 19 15:02:16 2001
-+++ cr400beta22-src/source/makefile.lnx	Thu Jan 31 17:28:31 2002
-@@ -13,10 +13,10 @@
- DELETE = rm -f
- COPY = cp
- OS_TYPE = LINUX
--CFLAGS = -Wall -g -D$(OS_TYPE) $(EXTRA_FLAGS)
--LDFLAGS = -static -L/usr/lib
-+CFLAGS = -Wall -D$(OS_TYPE) $(EXTRA_FLAGS)
-+LDFLAGS =
+diff -ruN dc400b24-src./source/makefile.lnx dc400b24-src/source/makefile.lnx
+--- dc400b24-src./source/makefile.lnx	Wed May 29 11:30:02 2002
++++ dc400b24-src/source/makefile.lnx	Fri Jan 17 01:20:46 2003
+@@ -20,8 +20,8 @@
+ 
+ LDFLAGS = -static -L/usr/lib
  MCHMOD = 2755
--INSTALLDIR = /usr/games
+-# INSTALLDIR = /usr/games
+-INSTALLDIR = /opt/crawl/bin
 +INSTALLDIR = $(DESTDIR)/usr/games
++#INSTALLDIR = /opt/crawl/bin
  LIB = -lncurses
  
  # Include for Linux
-@@ -55,7 +55,7 @@
+@@ -31,7 +31,7 @@
+ 
+ install: $(GAME)
+ 	$(COPY) $(GAME) ${INSTALLDIR}
+-	chmod ${MCHMOD} ${INSTALLDIR}/$(GAME)
++	/bin/true ${MCHMOD} ${INSTALLDIR}/$(GAME)
+ 
+ clean:
+ 	$(DELETE) *.o
+@@ -50,7 +50,7 @@
+ 
+ $(GAME): $(OBJECTS)
+ 	${CXX} ${LDFLAGS} $(INCLUDES) $(CFLAGS) $(OBJECTS) -o $(GAME) $(LIB)
+-	chmod ${MCHMOD} $(GAME)
++	/bin/true ${MCHMOD} $(GAME)
+ 
+ debug: $(OBJECTS)
+ 	${CXX} ${LDFLAGS} $(INCLUDES) $(CFLAGS) $(OBJECTS) -o $(GAME) $(LIB)
+@@ -59,7 +59,7 @@
  	${CXX} -g -p ${LDFLAGS} $(INCLUDES) $(CFLAGS) $(OBJECTS) -o $(GAME) $(LIB)
  
  .cc.o:
