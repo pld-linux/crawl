@@ -1,11 +1,12 @@
 Summary:	Orb of Zot-retrieval-quest
 Summary(pl):	Zdob±d¼ Kulê Zota
 Name:		crawl
-Version:	400beta22
-Release:	3
+Version:	400b23
+Release:	1
+Epoch:		1
 License:	Crawl GPL
 Group:		Applications/Games
-Source0:	ftp://ftp.dungeoncrawl.org/LATEST/devteam/cr%{version}-src.tar.bz2
+Source0:	ftp://ftp.dungeoncrawl.org/LATEST/dev/dc%{version}-src.tbz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
@@ -39,7 +40,7 @@ od pierwszego spojrzenia. Sterowanie odbywa siê g³ównie jedno
 klawiszowymi poleceniami.
 
 %prep
-%setup -q -n cr%{version}-src
+%setup -q -n dc%{version}-src
 %patch0 -p1
 %patch1 -p1
 
