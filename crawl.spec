@@ -7,6 +7,7 @@ Epoch:		1
 License:	Crawl GPL
 Group:		Applications/Games
 Source0:	ftp://ftp.dungeoncrawl.org/dev/4.0.x/src/dc%{version}-src.tbz2
+# Source0-md5:	807810185ff93f06bd4e169067644d8f
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
