@@ -7,4 +7,5 @@ Icon=crawl.png
 Exec=/usr/games/crawl
 Terminal=true
 Type=Application
+Categories=Game;X-RPGGame;
 # vi: encoding=utf-8
