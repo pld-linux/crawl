@@ -55,12 +55,12 @@ cd source
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6,%{_datadir},%{_applnkdir}/Games/RPG,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6,%{_datadir},%{_desktopdir},%{_pixmapsdir}}
 
 install source/crawl $RPM_BUILD_ROOT%{_bindir}
 install docs/crawl.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/RPG
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 :> $RPM_BUILD_ROOT%{_datadir}/scores
@@ -76,5 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/scores
 %{_mandir}/man6/*
-%{_applnkdir}/Games/RPG/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
