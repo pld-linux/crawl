@@ -1,7 +1,7 @@
 diff -ruN cr400beta22-srcdupa/source/makefile.lnx cr400beta22-src/source/makefile.lnx
 --- cr400beta22-srcdupa/source/makefile.lnx	Wed Dec 19 15:02:16 2001
 +++ cr400beta22-src/source/makefile.lnx	Thu Jan 31 17:28:31 2002
-@@ -13,11 +13,11 @@
+@@ -13,10 +13,10 @@
  DELETE = rm -f
  COPY = cp
  OS_TYPE = LINUX
@@ -10,10 +10,8 @@ diff -ruN cr400beta22-srcdupa/source/makefile.lnx cr400beta22-src/source/makefil
 +CFLAGS = -Wall -D$(OS_TYPE) $(EXTRA_FLAGS)
 +LDFLAGS =
  MCHMOD = 2755
--# INSTALLDIR = /usr/games
--INSTALLDIR = /opt/crawl/bin
+-INSTALLDIR = /usr/games
 +INSTALLDIR = $(DESTDIR)/usr/games
-+#INSTALLDIR = /opt/crawl/bin
  LIB = -lncurses
  
  # Include for Linux
