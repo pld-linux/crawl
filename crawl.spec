@@ -5,21 +5,6 @@ Version:	400beta22
 Release:	2
 License:	Crawl GPL
 Group:		Applications/Games
-Group(cs):	Aplikace/Hry
-Group(da):	Programmer/Spil
-Group(de):	Applikationen/Spiele
-Group(es):	Aplicaciones/Juegos
-Group(fr):	Applications/Jeux
-Group(is):	Forrit/Leikir
-Group(it):	Applicazioni/Giochi
-Group(ja):	╔╒╔в╔Й╔╠║╪╔╥╔Г╔С/╔╡║╪╔Ю
-Group(no):	Applikasjoner/Spill
-Group(pl):	Aplikacje/Gry
-Group(pt):	AplicaГУes/Jogos
-Group(ru):	Приложения/Игры
-Group(sl):	Programi/Igre
-Group(sv):	TillДmpningar/Spel
-Group(uk):	Прикладн╕ Програми/╤гри
 Source0:	ftp://ftp.dungeoncrawl.org/LATEST/devteam/cr%{version}-src.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
