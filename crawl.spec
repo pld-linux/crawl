@@ -1,12 +1,12 @@
 Summary:	Orb of Zot-retrieval-quest
 Summary(pl):	Zdob±d¼ Kulê Zota
 Name:		crawl
-Version:	400b23
-Release:	2
+Version:	400b24
+Release:	1
 Epoch:		1
 License:	Crawl GPL
 Group:		Applications/Games
-Source0:	ftp://ftp.dungeoncrawl.org/LATEST/dev/dc%{version}-src.tbz2
+Source0:	ftp://ftp.dungeoncrawl.org/dev/4.0.x/src/dc%{version}-src.tbz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
@@ -47,7 +47,10 @@ klawiszowymi poleceniami.
 
 %build
 cd source
-%{__make} -f makefile.lnx EXTRA_FLAGS="%{rpmcflags}"
+%{__make} -f makefile.lnx \
+	CFLAGS="-DLINUX %{rpmcflags} -fno-rtti -fno-exceptions" \
+	LDFLAGS="%{rpmldflags}" \
+	CXX="%{__cxx}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
