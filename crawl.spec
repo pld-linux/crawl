@@ -75,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/changes.* docs/crawl.txt docs/todo.txt docs/versions.txt
 %attr(2755,root,games) %{_bindir}/crawl
 %attr(2775,root,games) %dir %{_datadir}
-%attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/scores
+%attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) %{_datadir}/scores
 %{_mandir}/man6/*
 %{_desktopdir}/*
 %{_pixmapsdir}/*
