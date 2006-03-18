@@ -12,10 +12,10 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
+URL:		http://dungeoncrawl.org/
 BuildRequires:	ncurses-devel
 Requires:	zip
 Conflicts:	applnk < 1.5.13
-URL:		http://dungeoncrawl.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_datadir	/var/games/crawl
