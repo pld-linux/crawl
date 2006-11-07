@@ -77,5 +77,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) %{_datadir}/scores
 %{_mandir}/man6/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
