@@ -1,5 +1,5 @@
 Summary:	Orb of Zot-retrieval-quest
-Summary(pl):	Zdob±d¼ Kulê Zota
+Summary(pl.UTF-8):   ZdobÄ…dÅº KulÄ™ Zota
 Name:		crawl
 Version:	400b26
 Release:	3
@@ -31,15 +31,15 @@ Rogue. Its graphics are simple but highly informative, designed to be
 understood at a glance, and control is exercised largely through
 one-keystroke commands.
 
-%description -l pl
-Crawl jest du¿± i bardzo losow± gr± podziemnej eksploracji w
-fantastycznym ¶wiecie magii i czêstej przemocy. Twoim zadaniem jest
-podró¿ w g³±b Lochu (który w ka¿dej grze jest inny) i odzyskanie Kuli
+%description -l pl.UTF-8
+Crawl jest duÅ¼Ä… i bardzo losowÄ… grÄ… podziemnej eksploracji w
+fantastycznym Å›wiecie magii i czÄ™stej przemocy. Twoim zadaniem jest
+podrÃ³Å¼ w gÅ‚Ä…b Lochu (ktÃ³ry w kaÅ¼dej grze jest inny) i odzyskanie Kuli
 Zota.
 
-Crawl jest gr± RPG typu 'rogue-like', jednym z potomków Rogue. Grafika
-jest prosta, ale wysoce informatywna, zaprojektowana by byæ zrozumia³±
-od pierwszego spojrzenia. Sterowanie odbywa siê g³ównie jedno
+Crawl jest grÄ… RPG typu 'rogue-like', jednym z potomkÃ³w Rogue. Grafika
+jest prosta, ale wysoce informatywna, zaprojektowana by byÄ‡ zrozumiaÅ‚Ä…
+od pierwszego spojrzenia. Sterowanie odbywa siÄ™ gÅ‚Ã³wnie jedno
 klawiszowymi poleceniami.
 
 %prep
