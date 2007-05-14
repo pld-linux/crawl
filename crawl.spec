@@ -1,3 +1,7 @@
+#
+# TODO
+# http://crawl-ref.sourceforge.net/
+#
 Summary:	Orb of Zot-retrieval-quest
 Summary(pl.UTF-8):	Zdobądź Kulę Zota
 Name:		crawl
