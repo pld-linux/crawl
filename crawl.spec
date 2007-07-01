@@ -16,6 +16,7 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
+Patch2:		%{name}-fix_build.patch
 URL:		http://dungeoncrawl.org/
 BuildRequires:	ncurses-devel
 Requires:	zip
@@ -50,6 +51,7 @@ klawiszowymi poleceniami.
 %setup -q -n dc%{version}-src
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cd source
