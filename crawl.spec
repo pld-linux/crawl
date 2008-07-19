@@ -17,6 +17,7 @@ Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
 Patch2:		%{name}-fix_build.patch
+Patch3:		%{name}-gcc43.patch
 URL:		http://dungeoncrawl.org/
 BuildRequires:	ncurses-devel
 Requires:	zip
@@ -52,6 +53,7 @@ klawiszowymi poleceniami.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 cd source
