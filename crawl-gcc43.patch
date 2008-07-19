@@ -1,0 +1,136 @@
+diff -urN dc400b26-src/source/describe.cc dc400b26-src.new/source/describe.cc
+--- dc400b26-src/source/describe.cc	2003-03-20 08:01:10.000000000 +0100
++++ dc400b26-src.new/source/describe.cc	2008-07-19 13:45:06.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string>
++#include <cstring>
+ 
+ #ifdef DOS
+ #include <conio.h>
+diff -urN dc400b26-src/source/effects.cc dc400b26-src.new/source/effects.cc
+--- dc400b26-src/source/effects.cc	2003-03-18 06:40:48.000000000 +0100
++++ dc400b26-src.new/source/effects.cc	2008-07-19 13:45:36.000000000 +0200
+@@ -13,6 +13,7 @@
+ 
+ #include <string.h>
+ #include <stdio.h>
++#include <cstdlib>
+ 
+ #include "externs.h"
+ 
+diff -urN dc400b26-src/source/hiscores.cc dc400b26-src.new/source/hiscores.cc
+--- dc400b26-src/source/hiscores.cc	2003-03-22 08:48:06.000000000 +0100
++++ dc400b26-src.new/source/hiscores.cc	2008-07-19 13:46:01.000000000 +0200
+@@ -29,6 +29,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <ctype.h>
++#include <cstring>
+ 
+ #include "AppHdr.h"
+ #include "externs.h"
+diff -urN dc400b26-src/source/initfile.cc dc400b26-src.new/source/initfile.cc
+--- dc400b26-src/source/initfile.cc	2003-03-20 06:09:26.000000000 +0100
++++ dc400b26-src.new/source/initfile.cc	2008-07-19 13:59:18.000000000 +0200
+@@ -10,6 +10,8 @@
+  *      <1>     6/9/99          DML             Created
+  */
+ 
++#include <cstring>
++
+ #include "AppHdr.h"
+ #include "initfile.h"
+ 
+diff -urN dc400b26-src/source/it_use3.cc dc400b26-src.new/source/it_use3.cc
+--- dc400b26-src/source/it_use3.cc	2003-03-13 17:38:48.000000000 +0100
++++ dc400b26-src.new/source/it_use3.cc	2008-07-19 13:46:43.000000000 +0200
+@@ -15,6 +15,7 @@
+ #include "it_use3.h"
+ 
+ #include <string.h>
++#include <cstdlib>
+ 
+ #include "externs.h"
+ 
+diff -urN dc400b26-src/source/libutil.cc dc400b26-src.new/source/libutil.cc
+--- dc400b26-src/source/libutil.cc	2002-06-09 08:20:18.000000000 +0200
++++ dc400b26-src.new/source/libutil.cc	2008-07-19 13:47:09.000000000 +0200
+@@ -11,6 +11,7 @@
+ #include "AppHdr.h"
+ #include <stdio.h>
+ #include <ctype.h>
++#include <cstring>
+ 
+ void get_input_line( char *const buff, int len )
+ {
+diff -urN dc400b26-src/source/macro.cc dc400b26-src.new/source/macro.cc
+--- dc400b26-src/source/macro.cc	2003-03-18 06:40:48.000000000 +0100
++++ dc400b26-src.new/source/macro.cc	2008-07-19 13:47:31.000000000 +0200
+@@ -37,6 +37,7 @@
+ #include <string>
+ #include <map>
+ #include <deque>
++#include <cstring>
+ 
+ #include <stdio.h>      // for snprintf
+ #include <ctype.h>      // for tolower
+diff -urN dc400b26-src/source/monplace.cc dc400b26-src.new/source/monplace.cc
+--- dc400b26-src/source/monplace.cc	2003-03-23 10:54:50.000000000 +0100
++++ dc400b26-src.new/source/monplace.cc	2008-07-19 13:48:06.000000000 +0200
+@@ -8,6 +8,8 @@
+  *               <1>     -/--/--        LRH             Created
+  */
+ 
++#include <cstring>
++
+ #include "AppHdr.h"
+ #include "monplace.h"
+ 
+diff -urN dc400b26-src/source/randart.cc dc400b26-src.new/source/randart.cc
+--- dc400b26-src/source/randart.cc	2003-03-13 17:38:48.000000000 +0100
++++ dc400b26-src.new/source/randart.cc	2008-07-19 13:48:37.000000000 +0200
+@@ -12,6 +12,8 @@
+  *   <1>     -/--/--     LRH    Created
+  */
+ 
++#include <cstdlib>
++
+ #include "AppHdr.h"
+ #include "randart.h"
+ 
+diff -urN dc400b26-src/source/skills2.cc dc400b26-src.new/source/skills2.cc
+--- dc400b26-src/source/skills2.cc	2003-03-18 06:40:48.000000000 +0100
++++ dc400b26-src.new/source/skills2.cc	2008-07-19 13:49:03.000000000 +0200
+@@ -15,6 +15,8 @@
+  * <1> -/--/--   LRH             Created
+  */
+ 
++#include <cstring>
++
+ #include "AppHdr.h"
+ #include "skills2.h"
+ 
+diff -urN dc400b26-src/source/spells4.cc dc400b26-src.new/source/spells4.cc
+--- dc400b26-src/source/spells4.cc	2003-03-18 06:40:48.000000000 +0100
++++ dc400b26-src.new/source/spells4.cc	2008-07-19 13:49:23.000000000 +0200
+@@ -14,6 +14,7 @@
+ 
+ #include <string>
+ #include <stdio.h>
++#include <cstring>
+ 
+ #include "externs.h"
+ 
+diff -urN dc400b26-src/source/tags.cc dc400b26-src.new/source/tags.cc
+--- dc400b26-src/source/tags.cc	2003-03-18 06:40:48.000000000 +0100
++++ dc400b26-src.new/source/tags.cc	2008-07-19 13:49:55.000000000 +0200
+@@ -55,6 +55,7 @@
+ 
+ #include <stdio.h>
+ #include <string.h>            // for memcpy
++#include <cstdlib>
+ 
+ #ifdef LINUX
+ #include <sys/types.h>
