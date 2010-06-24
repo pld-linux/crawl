@@ -1,0 +1,11 @@
+--- dc400b26-src/source/makefile.lnx~	2010-06-24 14:25:36.437454114 +0200
++++ dc400b26-src/source/makefile.lnx	2010-06-24 14:27:31.720755818 +0200
+@@ -23,7 +23,7 @@
+ MCHMOD = 2755
+ INSTALLDIR = $(DESTDIR)/usr/games
+ #INSTALLDIR = /opt/crawl/bin
+-LIB = -lncurses
++LIB = -lncurses -ltinfo
+ 
+ # Include for Linux
+ INCLUDES = -I/usr/include/ncurses
