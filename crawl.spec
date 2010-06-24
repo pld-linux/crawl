@@ -1,7 +1,3 @@
-#
-# TODO
-# http://crawl-ref.sourceforge.net/
-#
 Summary:	Orb of Zot-retrieval-quest
 Summary(pl.UTF-8):	Zdobądź Kulę Zota
 Name:		crawl
@@ -18,6 +14,7 @@ Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-savedir.patch
 Patch2:		%{name}-fix_build.patch
 Patch3:		%{name}-gcc43.patch
+Patch4:		%{name}-link.patch
 URL:		http://dungeoncrawl.org/
 BuildRequires:	ncurses-devel
 Requires:	zip
@@ -54,6 +51,7 @@ klawiszowymi poleceniami.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 cd source
@@ -84,6 +82,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2755,root,games) %{_bindir}/crawl
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) %{_datadir}/scores
-%{_mandir}/man6/*
-%{_desktopdir}/*.desktop
-%{_pixmapsdir}/*
+%{_mandir}/man6/crawl.6*
+%{_desktopdir}/crawl.desktop
+%{_pixmapsdir}/crawl.png
