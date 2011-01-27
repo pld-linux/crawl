@@ -16,6 +16,7 @@ Patch2:		%{name}-fix_build.patch
 Patch3:		%{name}-gcc43.patch
 Patch4:		%{name}-link.patch
 URL:		http://dungeoncrawl.org/
+BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
 Requires:	zip
 Conflicts:	applnk < 1.5.13
